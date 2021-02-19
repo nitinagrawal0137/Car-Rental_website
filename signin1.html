@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signin for Page</title>
+<script src="myscript.js"></script>
+<style>
+body,html{
+     height:100;
+}
+*{
+	box-sizing: border-box;
+}
+h1{
+	position:center;
+	color:white;
+	padding:20px;
+	right:500;
+}
+
+
+.img1{
+	
+	background-image:url("https://image.freepik.com/free-photo/blurred-background-raindrops-windshield-street-light-night-rainy-day_40643-51.jpg");
+	min-height:1000px;
+	background-position: center;
+	background-size:cover;
+	position:relative;
+
+}
+.container{
+	position: absolute;
+	margin:50px;
+	right:500;
+	padding:20px 20px;
+	max-width:400px;
+	background-color:transparent;
+	
+}
+input{
+	width:100%;
+	padding:10px;
+	margin:5px 0 20px 0;
+	background:#f1f1f1;
+	background-color:transparent;
+	color:white;
+}
+.sub{
+	background-color:#4CAF50;
+	color:white;
+	cursor:pointer;
+	border:none;
+	
+	padding: 10px;
+	opacity:0.9;
+    
+}
+
+</style>
+</head>
+<body>
+<div class=img1> 
+    <h1><b>Signin To Join</b> </h1>
+   
+    <form action="resgister.php" method ="POST" class="container" onsubmit="return validation()" >
+        <p><font color="white">Name</font> </p>  <input type="text" name="username" placeholder="Name"/><br>
+        <p><font color="white">Email</font> </p>  <input type="text" name="email" placeholder="Email"/><br>
+        <p><font color="white">Set Password</font> </p> 
+  	  <input type="password" name="password_1">
+  	</div>
+  	<div class="input-group">
+  	  <label>Confirm password</label>
+  	  <input type="password" name="password_2">
+        
+         <button type="submit" class="sub" name="reg_user">Register</button>
+        </form>
+</body>
+</html>

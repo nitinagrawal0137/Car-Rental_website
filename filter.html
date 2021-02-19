@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Filter model</title>
+        <style>
+            #myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color:indianred;
+}
+tr.clicked {
+      background-color: #abc;
+}
+
+body {
+      background-image: url(16.jpg);
+      background-size: 1000px 1000px;
+      color: black;
+      padding: 20px;
+      text-emphasis: none;
+      color:aliceblue;
+     
+    }
+    th{
+        font-size: large;
+        color:black;
+    }
+    input{
+        width: 500px;
+        height: 35px;
+        background-color: transparent;
+        border-color:midnightblue;
+        color:mistyrose;
+    }
+    td{
+        color:aliceblue;
+        font-size: large;
+    }
+        </style>
+        <script>
+            function myFunction() {
+              
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();   //convert it to uppercase so it doesnt differentiate between captial and small letter while serach
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+            
+              
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];  //[0] becoz to serach for first column in list of Name
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {  // greater than -1 becoz it give value greater than -1 when value found
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+            </script>
+    </head>
+    <body>
+        <h1><b>Find The Best Car At The Best Price!</b></h1>
+        <br>
+        <br>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><br>
+        <br>
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:35%"> Car Model Name</th>
+    <th style="width:30%;">Number of seat</th>
+    <th style="width:25%;">Average Range per hour in(RS)</th>
+  </tr>
+  <br>
+  <tr>
+    <td><a href="MarutiSuzukiBaleno.html">Maruti Suzuki Baleno</a></td>
+    <td>5</td>
+    <td>800</td>
+  </tr>
+  <tr>
+    <td>Maruti Suzuki Swift </td>
+    <td>5</td>
+    <td>500</td>
+  </tr>
+   <tr>
+    <td>Hyundai Aura</td>
+    <td>5</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td><a href="Mahendrabolero.html">Mahendra Bolero</a></td>
+    <td>7</td>
+    <td>1000</td>
+  </tr>
+  <tr>
+    <td><a href="audia6.html">Audi A6</a></td>
+    <td>6</td>
+    <td>1200</td>
+  </tr>
+  <tr>
+    <td>Mahindra Scorpio</td>
+    <td>7</td>
+    <td>1200</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>Tata Nano</td>
+    <td>4</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>Mercedes-Benz C-class</td>
+    <td>5</td>
+    <td>1100</td>
+  </tr>
+  <tr>
+    <td>Volkswagen Polo</td>
+    <td>5</td>
+    <td>900</td>
+  </tr>
+</table>
+</body>
+</html>

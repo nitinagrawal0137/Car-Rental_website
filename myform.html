@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image upload </title>
+<style>
+    body{
+        text-align:center;
+        background-image: url(https://image.shutterstock.com/image-photo/beautiful-abstract-grungebackgrpound-decorative-navy-260nw-1552346156.jpg);
+      background-size:cover;
+      color: black;
+      padding: 20px;
+      text-emphasis: none;
+      
+      min-height:1000px;
+	 background-position: center;
+     
+    	
+	  position:relative;
+    }
+    .sub{
+	background-color:#4CAF50;
+	color:white;
+	cursor:pointer;
+	border:none;
+	
+	padding: 10px;
+	opacity:0.9;
+    
+}
+input{
+    background-color:transparent;
+    border-color:black;
+}
+textarea{
+    background-color:transparent;
+    border-color:black;
+}
+p{
+    color:yellow;
+}
+h1{
+    color:indigo;
+}
+    </style>
+</head>
+<body>
+<h1>Fill up the Details</h1>
+<br>
+<br>
+<form action="http://localhost/project2/resg.php" method ="post" class="container" onsubmit="return validation()" >
+<p><b>Please Enter Your Car Model</b></p>
+<input type="text" name ="m1" placeholder="Car model..." ><br>
+<p><b>Please Enter the Exact Location</b></p>
+<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea><br>
+              
+<p><b>Enter the Date to provide the Car in Rent </b></p>
+<input type="text" name="d1" placeholder="dd/mm/yyyy"/><br>
+<p><b>Enter the Duration of Hours</b></p>
+<input type="text" name ="d2" placeholder="HH:MM:SS"/> <input type="text" name="d3" placeholder="HH:MM:SS"/><br><br>
+<input type =submit value="submit" class=sub>
+</form>
+</body>
+</html>

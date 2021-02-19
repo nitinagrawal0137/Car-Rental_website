@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Divide the screen</title>
+<link rel="stylesheet" href="style2.css">
+<style>
+:root {
+  --container-bg-color: #333;
+ 
+  --left-button-hover-color: rgba(161, 11, 11, 0.3);
+
+  --right-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+html, body {
+  padding:0;
+  margin:0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.split.left .button:hover {
+ 
+  border-color: var(--left-button-hover-color);
+}
+
+.split.right .button:hover {
+  
+  border-color: var(--right-button-hover-color);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left:0;
+  background: url('https://c1.wallpaperflare.com/preview/774/603/754/background-blur-blurred-car.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.left:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  
+}
+
+.split.right {
+  right:0;
+  background: url('https://ak0.picdn.net/shutterstock/videos/10109810/thumb/1.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.right:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  
+}
+
+.split.left, .split.right, .split.right:before, .split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media(max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="split left">
+    <h1>Our Top Cars with 24 hours service</h1>
+    <a href="filter.html" class="button">Read More</a>
+  </div>
+  <div class="split right">
+    <h1>Latest Car At Your Budget</h1>
+    <a href="http://localhost/project2/display.php" class="button">Read More</a>
+  </div>
+</div>
+</body>
+<html>

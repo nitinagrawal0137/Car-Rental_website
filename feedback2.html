@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+    
+body,html{
+     height:100;
+}
+*{
+	box-sizing: border-box;
+}
+h1{
+	position:center;
+	color:black;
+	padding:20px;
+	right:500;
+}
+
+
+.img1{
+	
+	background-image:url("22938.jpeg");
+	min-height:1000px;
+	background-position: center;
+	background-size:cover;
+	position:relative;
+
+}
+.container{
+	position: absolute;
+	margin:50px;
+	right:500;
+	padding:20px 20px;
+	max-width:400px;
+	background-color:transparent;
+	
+}
+input[type=text],input[type=password]{
+	width:100%;
+	padding:10px;
+	margin:5px 0 20px 0;
+	background:#f1f1f1;
+	background-color:transparent;
+	color:white;
+}
+.sub{
+	background-color:#4CAF50;
+	color:white;
+	cursor:pointer;
+	border:none;
+	
+	padding: 10px;
+	opacity:0.9;
+    
+}
+label{
+color:white;
+}
+textarea{
+background-color:transparent;
+color:white;
+}
+p{
+color:white;
+}
+
+    </style>
+    </head>
+ <body style="background-color:powderblue;">
+
+
+            <h1>FEEDBACK </h1><br><br>
+            <br>
+<div class="img1">
+            <div class="container">
+                <form action="action_page.php">
+              
+                  <label for="fname">First Name </label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+                  <br>
+                  <label for="lname">Last Name </label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+                  <br>
+                  
+                  <p>Feedback</p>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <br><br>
+                  <input type="submit" value="Submit" class=sub>
+              
+                </form>
+              </div>
+        </body>
+ </html>
